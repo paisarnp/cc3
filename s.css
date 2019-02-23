@@ -1,0 +1,8 @@
+p {
+    max-width: 500px;
+    /* min-width: 500px; */
+    border: solid red 2px ;
+    /* float: right; */
+    text-align: right;
+    margin: auto;
+}
