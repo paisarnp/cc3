@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4",
+    "pug": "^2.0.3"
+  },
+  "name": "day1_html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/paiboonpa/codecamp2.git"
+  },
+  "author": "Paiboon Panusbordee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/paiboonpa/codecamp2/issues"
+  },
+  "homepage": "https://gitlab.com/paiboonpa/codecamp2#README",
+  "description": ""
+}
