@@ -23,7 +23,8 @@
         $(function () {
             $('#btnOK').click(function () {
                 $.get('https://swapi.co/api/people/1').then(function (res) {
-                    $('#result').append("name:" + res.name);
+                    // $('#result').append("name:" + res.name);
+                    $('#result').append("<em>test</em>");
                 });
             });
         });
