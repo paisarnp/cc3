@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        fieldset {
+            border: 1px solid black;
+            width: 320px;
+            margin: auto;
+        }
+
+        .table {
+            margin: auto;
+            width: 310px;
+            /* width: 100%; */
+        }
+
+        .lp {
+            width: 130px;
+            float: left;
+        }
+
+        .rp {
+            width: 175px;
+            float: left;
+            /* float: right; */
+        }
+
+        .tp {
+            margin: auto;
+        }
+
+        .txt {
+            width: 200px;
+        }
+
+        .dl {
+            width: 204px;
+        }
+
+        .LastLine {
+            width: 115px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Register Form</legend>
+        <form onsubmit="return mf()">
+            <div class="table">
+                <div class="tp">
+                    <div class="lp">
+                        Firstname:
+                    </div>
+                    <div class="rp">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Lastname:
+                    </div>
+                    <div class="rp">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Password:
+                    </div>
+                    <div class="rp">
+                        <input type="password" id="p1">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Confirm Password:
+                    </div>
+                    <div class="rp">
+                        <input type="password" id="p2">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Email:
+                    </div>
+                    <div class="rp">
+                        <input type="email" id="e1">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Confirm Email:
+                    </div>
+                    <div class="rp">
+                        <input type="email" id="e2">
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Birthday:
+                    </div>
+                    <div class="rp">
+                        <select id="dd">
+                        </select>
+                        <select id="mm">
+                        </select>
+                        <select id="yyyy">
+                        </select>
+                    </div>
+                </div>
+                <div class="tp">
+                    <div class="lp">
+                        Gender:
+                    </div>
+                    <div class="rp">
+                        <input type="radio" name="gender" checked="checked">Male
+                        <input type="radio" name="gender">Female
+                    </div>
+                </div>
+
+
+                <div class="LastLine">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>
+
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script>
+    function mf() {
+        if (document.getElementById('p1').value !== document.getElementById('p2').value) {
+            alert('Password must be matched');
+            return false;
+        }
+        if (document.getElementById('e1').value !== document.getElementById('e2').value) {
+            alert('Email must be matched');
+            return false;
+        }
+        return true;
+    }
+
+    for (i = 1; i <= 31; i++) {
+        $('#dd').append('<option>' + i + '</option>');
+    }
+    for (i = 1; i <= 12; i++) {
+        $('#mm').append('<option>' + i + '</option>');
+    }
+    for (i = 1980; i <= 2005; i++) {
+        $('#yyyy').append('<option>' + i + '</option>');
+    }
+</script>
