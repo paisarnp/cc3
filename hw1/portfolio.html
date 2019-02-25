@@ -99,6 +99,31 @@
             float: right;
             /* clear: left; */
         }
+        .leftPic {
+            margin: 2em;
+            float: left;
+        }
+        .product {
+            width: 200px;
+            height: 250px;
+        }
+        .leftTxt {
+            margin: 0em 2em;
+            float: left;
+            font-size: 1.5em;
+        }
+        .rightPic {
+            margin: 2em;
+            float: right;
+        }
+        .rightTxt {
+            margin: 0em 3em 0em 0em;
+            float: right;
+            font-size: 1.5em;
+        }
+        .rowProduct {
+            clear: both;
+        }
     </style>
 </head>
 
@@ -124,20 +149,59 @@
         </ul>
     </nav>
 
-    <form>
+    <!-- <form> -->
     <div class="top-border">
-        <div class="first-pic"><img class="apples" src=/hw1/pics/apples.jpg /></div>
+        <div class="first-pic"><img class="apples" src="/hw1/pics/apples.jpg" /></div>
         <div class="myAppBox"><strong class="myAppTxt">My Application</strong></div>
-        <!-- <div class="formSearch">
-        <form> -->
+        <!-- <div class="formSearch"> -->
+        <form>
             <div><input class="inputSearch" type="search" /><button class="btn">Search</button></div>
             <!-- <div><button>Search</button></div> -->
-        <!-- </form>
-        </div> -->
+        </form>
+        <!-- </div> -->
         <div class="newProduct"><a href=#>New Product</a></div>
     </div>
-    </form>
+    <!-- </form> -->
     
+    <div class="rowProduct">
+        <div class="leftPic"><img class="product" src="pics/apples.jpg" /></div>
+        <div class="leftTxt">
+            <ul>
+                <li>Product name</li>
+                <li>Price</li>
+                <li>Description</li>
+            </ul>
+        </div>
+
+        <div class="rightTxt">
+            <ul>
+                <li>Product name</li>
+                <li>Price</li>
+                <li>Description</li>
+            </ul>
+        </div>
+        <div class="rightPic"><img class="product" src="pics/apples.jpg" /></div>
+    </div>
+
+    <div class="rowProduct">
+        <div class="leftPic"><img class="product" src="pics/apples.jpg" /></div>
+        <div class="leftTxt">
+            <ul>
+                <li>Product name</li>
+                <li>Price</li>
+                <li>Description</li>
+            </ul>
+        </div>
+
+        <div class="rightTxt">
+            <ul>
+                <li>Product name</li>
+                <li>Price</li>
+                <li>Description</li>
+            </ul>
+        </div>
+        <div class="rightPic"><img class="product" src="pics/apples.jpg" /></div>
+    </div>
 
 </body>
 
