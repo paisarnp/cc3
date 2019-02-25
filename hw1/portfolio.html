@@ -52,16 +52,17 @@
             border-radius: 10px;
             margin: 1.5em 0em;
             padding: 0em 0em 0em 0em;
-            display: flex;
+            height: 7.5em;
+            /* display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-around; */
             /* display: inline-block; */
             /* float: left; */
         }
         .first-pic {
             margin: 0.5em 2em 0.5em;
             /* align-items: center; */
-            /* float: left; */
+            float: left;
         }
         .apples {
             width: 100px;
@@ -69,29 +70,34 @@
             /* float: left; */
         }
         .myAppBox {
-            /* margin: 0em 0em 0em 0em;
+            margin: 0em 0em 0em 0em;
             padding: 0em 0em 0em 0em;
-            vertical-align: text-top;
-            vertical-align: top;
-            line-height: 10px; */
+            /* vertical-align: text-top;
+            vertical-align: top; */
+            line-height: 0px;
         }
         .myAppTxt {
-            /* float: left; */
-            margin: 0em 3em 0em 0em;
+            float: left;
+            margin: 2em 3em 0em 0em;
             /* padding: 0em 0em 0em 0em;
             vertical-align: text-top;
             vertical-align: top;
             line-height: 10px; */
             font-size: 2em;
         }
-        .formSearch{
+        .inputSearch {
             width: 30em;
-            margin: 0em 2em 0em 0em;
+            margin: 4em 2em 0em 25em;
+            float: left;
         }
-        .newProduct{
-            /* margin: 0em 0em 0em 3em; */
-            /* float: right;
-            clear: left; */
+        .btn {
+            margin: 4em 0em 0em 0em;
+            float: left;
+        }
+        .newProduct {
+            margin: 3.5em 2em 0em 3em;
+            float: right;
+            /* clear: left; */
         }
     </style>
 </head>
@@ -124,7 +130,7 @@
         <div class="myAppBox"><strong class="myAppTxt">My Application</strong></div>
         <!-- <div class="formSearch">
         <form> -->
-            <div><input class="formSearch" type="search" /><button>Search</button></div>
+            <div><input class="inputSearch" type="search" /><button class="btn">Search</button></div>
             <!-- <div><button>Search</button></div> -->
         <!-- </form>
         </div> -->
