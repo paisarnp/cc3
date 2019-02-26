@@ -12,9 +12,18 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        #banner-message {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <button id="toggleButton">Toggle Button</button>
+    <p id="banner-message">Hidden Msg</p>
+
+    <div id="div1"></div>
     <script>
         "use strict";
         // Function Declaration
@@ -78,7 +87,7 @@
 
         // Function in Object
         console.log("");
-        console.log("Function in Object");
+        // console.log("Function in Object");
         const myObject = {
             myProperty: 123,
             myFunction: function (message) {
@@ -88,6 +97,50 @@
         alert(myObject.myProperty);
         myObject.myFunction("Hello World!");
 
+
+        // Callback Function by jQuery ใน Lab สั่งว่าไม่ต้องทำ
+        /*         const hiddenBox = $("#banner-message");
+                $("#toggleButton").on("click", function (event) {
+                    hiddenBox.show();
+                }); */
+        $("#toggleButton").on("click", function (event) {
+            $("#banner-message").show();
+        });
+
+        $("button").click(function () {
+            $.ajax({
+                url: "demo_test.txt", success: function (result) {
+                    $("#div1").html(result);
+                }
+            });
+        });
+
+
+        // Function as value or memory address?
+        console.log("Function as value or memory address? #1");
+        function hello3() {
+            return 1;
+        }
+        console.log("console.log(hello3);");
+        console.log(hello3); // Function
+        console.log("console.log(hello3());");
+        console.log(hello3()); // 1
+
+        console.log("Function as value or memory address? #2");
+        function hello3() {
+            return 1;
+        }
+        function tryHello3(callbackFunction) {
+            return callbackFunction();
+        }
+        console.log("console.log(hello3());");
+        console.log(hello3()); // 1
+        console.log("console.log(hello3);");
+        console.log(hello3); // Function
+        console.log("console.log(tryHello3(hello3));");
+        console.log(tryHello3(hello3)); // 1
+        console.log("console.log(tryHello3(hello3()));");
+        console.log(tryHello3(hello3())); // ?
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
