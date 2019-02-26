@@ -1,3 +1,4 @@
+"use strict";
 const jn1 = [
     { "id": "1001", "firstname": "Luke", "lastname": "Skywalker", "company": "Walt Disney", "salary": "40000" },
     { "id": "1002", "firstname": "Tony", "lastname": "Stark", "company": "Marvel", "salary": "1000000" },
@@ -27,7 +28,7 @@ let ar = [];
 console.log("Length of Object 'jnNoC[0]' =", Object.keys(jnNoC[0]).length);
 
 //let jnForIn = jn1.map(i => {    //ใช้ i ซ้ำได้??? debug แล้วเป็นค่าเดิม???****************************
-for (x in jnNoC[0]) {
+for (let x in jnNoC[0]) {
     //    let text += i[x] + " ";   //ไม่ได้ ผิด syntax
     //        text += i[x] + " "; //ไม่เข้าใจ x, x เปลี่ยนเป็น property ตัวถัดไปยังไง ทำตามตัวอย่างแล้วได้เป็น undefined1001
     //        i[x] += i[x] + " ";
@@ -59,7 +60,7 @@ console.log('\nar =', ar);
 // $('body').append('<h1 id="tl">After Cut Company</h1>');
 $('body').append('<table id="tb"><tr id="trh"></tr></table>');
 
-for (x in jnNoC[0]) {
+for (let x in jnNoC[0]) {
     $('#trh').append('<th>' + x + '</th>');
 }
 
