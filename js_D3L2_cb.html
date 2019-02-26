@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        // Function Declaration
+        console.log("Function Declaration")
+        // Function Declaration แบบที่ 1
+        function hello1(parameter1, parameter2, parameter3) {
+            console.log('hello1 ' + parameter1 + parameter2 + parameter3);
+        };
+        // Function Declaration แบบที่ 2
+        let hello2 = function (parameter1, parameter2, parameter3) {
+            console.log('hello2 ' + parameter1 + parameter2 + parameter3);
+        };
+
+        /* ้hello2 = function (parameter1, parameter2, parameter3) {    // ถ้าแบบประกาศตัวแปร ประกาศซ้ำไม่ได้?????????????? ไม่ได้ตั้งใจลองเล่น ตั้งใจจะเอา Lab ทำเป็น file ดูในอนาคต
+            console.log('hello2 ' + parameter1 + parameter2 + parameter3);
+            console.log("can't");
+        }; */
+
+        // เรียก fn
+        hello1('1', '2', '3');
+        hello2('1', '2', '3');
+        console.log("");
+
+
+        // Function as parameters
+        /* let hello = function (parameter1, parameter2, parameter3) {
+            console.log('hello' + parameter1 + parameter2 + parameter3);
+        }; */
+        console.log("");
+        console.log("Function as parameters");
+        function func(callback) {
+            callback('1', '2', '3');
+        }
+        function func2(callbackA, callbackB) { // ประกาศ parameter ที่เป็น fn 2 parameters ได้
+            callbackA('1', '2', '3');
+            callbackB('4', '5', '6');
+        }
+        console.log("func(hello1);");
+        func(hello1);
+        console.log("func2(hello1, hello2);"); // hello1 มีค่าเท่ากับ hello2
+        func2(hello1, hello2);
+        console.log("func2(hello1, hello1);");
+        func2(hello1, hello1); // ใส่ parameter ที่เป็น fn ซ้ำกันคนละ parameter ได้
+        hello1('7', '8', '9');
+
+
+        // Callback Function
+        console.log("");
+        console.log("Callback Function");
+        function func(callback) { // function func(callback) ประกาศ fn ซ้ำได้ ใช้อันล่างสุด???????????????
+            callback('1', '2', '5');
+            console.log("ประกาศ fn อีกครั้ง");
+        }
+        func(function (parameter1, parameter2, parameter3) {    // แทน function เป็นตัวหนังสือ เดิมเป็น func(hello1);
+            console.log('hello' + parameter1 + parameter2 + parameter3);
+        });
+
+
+        // Anonymous Function เขียนซ้ำ Callback Function
+
+
+        // Function in Object
+        console.log("");
+        console.log("Function in Object");
+        const myObject = {
+            myProperty: 123,
+            myFunction: function (message) {
+                alert(message);
+            }
+        };
+        alert(myObject.myProperty);
+        myObject.myFunction("Hello World!");
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
