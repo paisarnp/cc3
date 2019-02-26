@@ -6,12 +6,15 @@ const peopleSalary = [
     { "id": "1004", "firstname": "Monkey D", "lastname": "Luffee", "company": "One Piece", "salary": "9000000" }
 ]
 console.log("Before peopleSalary =\n", peopleSalary);
-
-for (let i = 0; i < peopleSalary.length; i++)
+setTimeout(function() {
+    for (let i = 0; i < peopleSalary.length; i++)
     if (peopleSalary[i].company) 
         delete peopleSalary[i].company;
 
-console.log("\nAfter peopleSalary =\n", peopleSalary)
+    console.log("\nAfter peopleSalary =\n", peopleSalary)
+}, 5000);
+
+
 
 let ar = [];
 

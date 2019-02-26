@@ -1,39 +1,39 @@
-const jn1 = [
+const peopleSalary = [
     { "id": "1001", "firstname": "Luke", "lastname": "Skywalker", "company": "Walt Disney", "salary": "40000" },
     { "id": "1002", "firstname": "Tony", "lastname": "Stark", "company": "Marvel", "salary": "1000000" },
     { "id": "1003", "firstname": "Somchai", "lastname": "Jaidee", "company": "Love2work", "salary": "20000" },
     { "id": "1004", "firstname": "Monkey D", "lastname": "Luffee", "company": "One Piece", "salary": "9000000" }
 ]
-console.log("jn1 =\n", jn1);
+console.log("peopleSalary =\n", peopleSalary);
 
-let jnS = JSON.stringify(jn1);
+let jnS = JSON.stringify(peopleSalary);
 console.log("\njnS =\n", jnS);
 
 let jnP = JSON.parse(jnS);
 console.log("\njnP =\n", jnP);
 
-let jnNoC = jn1.map(i => {
-//jn1.forEach(i => {
+let jnNoC = peopleSalary.map(i => {
+//peopleSalary.forEach(i => {
     if (i.company) {
         delete i.company;
-        return i; //ใช้กรณี let jnNoC = jn1.map(i => {
+        return i; //ใช้กรณี let jnNoC = peopleSalary.map(i => {
     }
 });
 console.log("\n\njnNoc =\n", jnNoC);
-console.log("\njn1 =\n", jn1)   //***************************map เปลี่ยน source ด้วย??? ที่จริงต้องไม่เปลี่ยนเพราะ จาก https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map ลองเพิ่ม console.log(numbers); มันไม่เปลี่ยน --- เฉลย ถ้าเป็น Array 2D และคำสั่ง delete จะเปลี่ยน source แต่ รอเรียน pointer ก่อน แล้วมาดูใหม่???*******************************
+console.log("\npeopleSalary =\n", peopleSalary)   //***************************map เปลี่ยน source ด้วย??? ที่จริงต้องไม่เปลี่ยนเพราะ จาก https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map ลองเพิ่ม console.log(numbers); มันไม่เปลี่ยน --- เฉลย ถ้าเป็น Array 2D และคำสั่ง delete จะเปลี่ยน source แต่ รอเรียน pointer ก่อน แล้วมาดูใหม่???*******************************
 
 let ar = [];
 
 console.log("Length of Object 'jnNoc[0]' =", Object.keys(jnNoC[0]).length);
 
-//let jnForIn = jn1.map(i => {    //ใช้ i ซ้ำได้??? debug แล้วเป็นค่าเดิม???****************************
+//let jnForIn = peopleSalary.map(i => {    //ใช้ i ซ้ำได้??? debug แล้วเป็นค่าเดิม???****************************
 for (x in jnNoC[0]) {
     //    let text += i[x] + " ";   //ไม่ได้ ผิด syntax
     //        text += i[x] + " "; //ไม่เข้าใจ x, x เปลี่ยนเป็น property ตัวถัดไปยังไง ทำตามตัวอย่างแล้วได้เป็น undefined1001
     //        i[x] += i[x] + " ";
     //        return text;
     //        return i[x];
-    //        console.log(i[x]);  //เฉยๆ ไม่มีบรรทัดอื่นใน for...in แต่มีบรรทัด let jnForIn = jn1.map(i => { จะพิมพ์ Value ทั้งหมดออกมา
+    //        console.log(i[x]);  //เฉยๆ ไม่มีบรรทัดอื่นใน for...in แต่มีบรรทัด let jnForIn = peopleSalary.map(i => { จะพิมพ์ Value ทั้งหมดออกมา
     ar.push(x);
     //        console.log(x);
     //        x += x + " ";
