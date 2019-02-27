@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.marginAll {
+    margin: 10px;
+}
+
+.AkeContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
