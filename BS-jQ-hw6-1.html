@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <style>
+        #dropdown {
+            float: right;
+        }
+    </style>
+
+    <title>hw6-1-BS-jQ</title>
+</head>
+
+<body>
+    <select id="dropdown" onchange="dropChange()">
+        <option value="black">Black</option>
+        <option value="white" selected>White</option>
+    </select>
+    <h1 class="theme">Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <script>
+        // change/add/remove class ได้ แต่ id ไม่ได้ 
+        function dropChange() {
+            if($('#dropdown').val() === 'black'){
+                $('body').css('background-color', 'black');
+                $('h1').css('color', 'white');
+            }
+            if($('#dropdown').val() === 'white'){
+                $('body').css('background-color', 'white');
+                $('h1').css('color', 'black');
+            }
+        }
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

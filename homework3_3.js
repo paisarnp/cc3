@@ -22,7 +22,7 @@ let jnNoC = peopleSalary.map(i => {
 console.log("\n\njnNoc =\n", jnNoC);
 console.log("\npeopleSalary =\n", peopleSalary)   //***************************map เปลี่ยน source ด้วย??? ที่จริงต้องไม่เปลี่ยนเพราะ จาก https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_map ลองเพิ่ม console.log(numbers); มันไม่เปลี่ยน --- เฉลย ถ้าเป็น Array 2D และคำสั่ง delete จะเปลี่ยน source แต่ รอเรียน pointer ก่อน แล้วมาดูใหม่???*******************************
 
-let ar = [];
+let arr = [];
 
 console.log("Length of Object 'jnNoc[0]' =", Object.keys(jnNoC[0]).length);
 
@@ -34,7 +34,7 @@ for (x in jnNoC[0]) {
     //        return text;
     //        return i[x];
     //        console.log(i[x]);  //เฉยๆ ไม่มีบรรทัดอื่นใน for...in แต่มีบรรทัด let jnForIn = peopleSalary.map(i => { จะพิมพ์ Value ทั้งหมดออกมา
-    ar.push(x);
+    arr.push(x);
     //        console.log(x);
     //        x += x + " ";
     //        return x; return ปุีบออกจาก fn map ซึ่งก็คือออกจาก for loop ด้วย
@@ -46,12 +46,12 @@ for (x in jnNoC[0]) {
 //ใช้วิธีเขียนทับ Array ที่มีอยู่ คล้ายๆ วิธี เพิ่ม property ของ Object ที่ไม่มี Method 'push' ใน homework4.js 
 let obl = 0 //Object length - 1
 for (x in jnNoC[0]) {
-    ar[obl]=x;
+    arr[obl]=x;
     obl++;
 }
 */
 
-console.log('\nar =', ar);
+console.log('\narr =', arr);
 //});
 //console.log("\njnForIn =\n", jnForIn)
 
