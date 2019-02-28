@@ -13,42 +13,42 @@
     <link rel="stylesheet" type="text/css" href="simpleTable.css" />
     <title>Lab5_2 jQ</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 </head>
 
 <body>
 
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 
     <!-- Optional JavaScript -->
     <script>
         // $(function () {
-        $.get('https://swapi.co/api/people/').then(function (res) {
-            console.log(res.results);
-            let TB = $('<table></table>');
-            let TR = $('<tr></tr>');
+            $.get('https://swapi.co/api/people/').then(function (res) {
+                console.log(res.results);
+                let TB = $('<table></table>');
+                let TR = $('<tr></tr>');
 
-            $('body').append(TB);
+                $('body').append(TB);
 
-            TB.append(TR);
-
-            for (let x in res.results[0]) {
-                TR.append('<th>' + x + '</th>');
-            }
-
-            res.results.forEach(ar => {
-                TR = $('<tr></tr>');
                 TB.append(TR);
-                for (let x in ar) {
-                    TR.append('<td>' + ar[x] + '</td>');
+
+                for (let x in res.results[0]) {
+                    TR.append('<th>' + x + '</th>');
                 }
-                // i++;
+
+                res.results.forEach(ar => {
+                    TR = $('<tr></tr>');
+                    TB.append(TR);
+                    for (let x in ar) {
+                        TR.append('<td>' + ar[x] + '</td>');
+                    }
+                });
             });
-        });
-    // });
+        // });
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
