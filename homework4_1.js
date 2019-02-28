@@ -39,9 +39,6 @@ function addAdditionalFields(emp) {
 
 $.get('homework3_1.json').then(function (jsonResponse) {
     console.log(jsonResponse);
-    // $responseField.append('<p> Your expanded URL is </p><p> ' + jsonResponse.longUrl + '</p>');
-    // return jsonResponse;
-    // console.log(jsonResponse);
 
     addAdditionalFields(jsonResponse);
 
