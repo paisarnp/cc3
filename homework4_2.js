@@ -67,7 +67,7 @@ function createTable(jsonE, str) {
     });
 }
 
-fetch('homework2_1.json').then(response => {
+fetch('homework3_1.json').then(response => {
     if (response.ok) {
         //   console.log(response.json());
         // debugger;
