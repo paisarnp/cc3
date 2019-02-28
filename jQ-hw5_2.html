@@ -10,14 +10,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <style>
-      .form-control {
-        background-color: yellow;
-      }
-    </style>
+  <style>
+    .form-control {
+      background-color: yellow;
+    }
+
+    body {
+      background-color: lightblue;
+    }
+  </style>
   <title>hw5_2 jQ</title>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 </head>
 
 <body>
@@ -684,25 +688,27 @@
   <!-- Optional JavaScript -->
   <script>
     // $(function () {
-      $('#btnConv').click(function () {
-        // console.log();
-        $('#output p').remove();
-        $.get('http://free.currencyconverterapi.com/api/v5/convert?q=' + $('#CURR_FR').val() + '_' + $('#CURR_TO').val() + '&compact=y&apiKey=3c9c48110d6cdb91f337').then(function (res) {
-          // console.log(parseFloat(res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val));
-          // console.log(parseFloat($('#exampleFormControlInput1').val()));
-          // console.log($('#exampleFormControlInput1').val());
-          // let result = parseFloat(res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val) * parseFloat($('#exampleFormControlInput1').val());
-          let result = res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val * $('#exampleFormControlInput1').val();
-          // console.log(result);
-          // $('#output').append('<p>' + result.toString() + '</p>');
-          $('#output').append('<p>' + result + '</p>');
-        });
+    // $('#btnConv').click(function () {
+    document.getElementById("btnConv").onclick = function() {
+      // console.log();
+      $('#output p').remove();
+      $.get('http://free.currencyconverterapi.com/api/v5/convert?q=' + $('#CURR_FR').val() + '_' + $('#CURR_TO').val() + '&compact=y&apiKey=3c9c48110d6cdb91f337').then(function (res) {
+        // console.log(parseFloat(res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val));
+        // console.log(parseFloat($('#exampleFormControlInput1').val()));
+        // console.log($('#exampleFormControlInput1').val());
+        // let result = parseFloat(res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val) * parseFloat($('#exampleFormControlInput1').val());
+        let result = res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val * $('#exampleFormControlInput1').val();
+        // console.log(result);
+        // $('#output').append('<p>' + result.toString() + '</p>');
+        $('#output').append('<p>' + result + '</p>');
       });
+    };
+    // });
     // });
   </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
