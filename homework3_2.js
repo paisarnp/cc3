@@ -6,8 +6,8 @@ const peopleSalary = [
     { "id": "1004", "firstname": "Monkey D", "lastname": "Luffee", "company": "One Piece", "salary": "9000000" }
 ]
 // alert("Before = " + peopleSalary[0].company);
-// console.log("Before peopleSalary =\n", peopleSalary);    // console.log มี bug
-// setTimeout(function () {
+// console.log("Before peopleSalary =\n", peopleSalary);
+// setTimeout(function () { // console.log มี bug เลยต้องใช้ setTimeoout
     for (let i = 0; i < peopleSalary.length; i++)
         if (peopleSalary[i].company)
             delete peopleSalary[i].company;
@@ -27,6 +27,14 @@ for (let x in peopleSalary[0]) {
     TR.append('<th>' + x + '</th>');
 }
 
+for (let i = 0; i < peopleSalary.length; i++) {
+    TR = $('<tr></tr>');
+    TB.append(TR);
+    for (let x in peopleSalary[i]) {
+        TR.append('<td>' + peopleSalary[i][x] + '</td>');
+    }
+}
+/* 
 peopleSalary.forEach(ar => {
     TR = $('<tr></tr>');
     TB.append(TR);
@@ -34,4 +42,4 @@ peopleSalary.forEach(ar => {
         TR.append('<td>' + ar[x] + '</td>');
     }
     // i++;
-});
+}); */
