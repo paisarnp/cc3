@@ -37,17 +37,7 @@ function addAdditionalFields(emp) {
     }
 }
 
-fetch('homework3_1.json').then(response => {
-    if (response.ok) {
-        //   console.log(response.json());
-        // debugger;
-        //   jn1 = response.json(); //ไม่ได้??? เพราะ async******************************
-        return response.json();
-        //      return console.log(response.json());
-    }
-    throw new Error('Request failed!');
-}, networkError => console.log(networkError.message)
-).then(jsonResponse => {
+$.get('homework3_1.json').then(function (jsonResponse) {
     console.log(jsonResponse);
     // $responseField.append('<p> Your expanded URL is </p><p> ' + jsonResponse.longUrl + '</p>');
     // return jsonResponse;
