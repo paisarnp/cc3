@@ -48,3 +48,12 @@ e.talk.talkInside = b.talk.talkInside;
 e.talk.talkInside = 'hong';
 console.log(b);  // {'animal':'cat', 'talk': {'talkInside':'meow'}}
 console.log(e); // {'animal':'dog', 'talk': {'talkInside':'hong'}}
+
+console.log("");
+console.log("ตัวอย่าง Pointer ใน Object (5)");
+b = {'animal':'cat', 'talk': {'talkInside':'meow'}};
+e = JSON.parse( JSON.stringify(b) );
+e.animal = 'dog';
+e.talk.talkInside = 'hong';
+console.log(b);  // {'animal':'cat', 'talk': {'talkInside':'meow'}}
+console.log(e); // {'animal':'dog', 'talk': {'talkInside':'hong'}}
