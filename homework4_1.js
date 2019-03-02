@@ -38,7 +38,7 @@ function addAdditionalFields(emp) {
 }
 
 // fetch('homework3_1.json').then(function (jsonResponse) {
-// $.get('homework3_1.json').then(function (jsonResponse) {
+// $.get('homework3_1.json').done(function (jsonResponse) {
 $.get('homework3_1.json').done(function (jsonResponse) {
     console.log(jsonResponse);
 

@@ -23,7 +23,7 @@
     <!-- Optional JavaScript -->
     <script>
         // $(function () {
-            $.get('https://swapi.co/api/people/').then(function (res) {
+            $.get('https://swapi.co/api/people/').done(function (res) {
                 console.log(res.results);
                 let TB = $('<table></table>');
                 let TR = $('<tr></tr>');

@@ -67,7 +67,7 @@ function createTable(jsonE, str) {
     });
 }
 
-fetch('homework3_1.json').then(response => {
+/* fetch('homework3_1.json').then(response => {
     if (response.ok) {
         //   console.log(response.json());
         // debugger;
@@ -77,7 +77,9 @@ fetch('homework3_1.json').then(response => {
     }
     throw new Error('Request failed!');
 }, networkError => console.log(networkError.message)
-).then(jsonResponse => {
+) 
+.then(jsonResponse => { */
+$.get('homework3_1.json').done(function (jsonResponse) {
     console.log(jsonResponse);
     // $responseField.append('<p> Your expanded URL is </p><p> ' + jsonResponse.longUrl + '</p>');
     // return jsonResponse;

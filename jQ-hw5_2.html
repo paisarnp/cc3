@@ -692,7 +692,7 @@
     document.getElementById("btnConv").onclick = function() {
       // console.log();
       $('#output p').remove();
-      $.get('http://free.currencyconverterapi.com/api/v5/convert?q=' + $('#CURR_FR').val() + '_' + $('#CURR_TO').val() + '&compact=y&apiKey=3c9c48110d6cdb91f337').then(function (res) {
+      $.get('http://free.currencyconverterapi.com/api/v5/convert?q=' + $('#CURR_FR').val() + '_' + $('#CURR_TO').val() + '&compact=y&apiKey=3c9c48110d6cdb91f337').done(function (res) {
         // console.log(parseFloat(res[$('#CURR_FR').val() + '_' + $('#CURR_TO').val()].val));
         // console.log(parseFloat($('#exampleFormControlInput1').val()));
         // console.log($('#exampleFormControlInput1').val());
